@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de cadenas</title>
+</head>
+<body>
+    <script>
+        var nombre = "Luis Enrique";
+        // Metodo Length cantidad de elementos
+        var texto =nombre.length;
+        // Metodo substring cortar una cadena en donde se indica
+        var texto = nombre.substring(6);
+        // substr pasar dos parametros que inican indice de inicio y cuantos caracteresdebe cortar
+        var texto = nombre.substr(0,4);
+        // IndexOf Devuelve eb que posicion se encuntra un elemebto
+        var texto = nombre.indexOf("e",5);
+        // LastIndexOF Busca desde atras hacia adaelante en que posicion s encuentra
+        var texto = nombre.lastIndexOf("e");
+        // Replace Permite remplazar una cadena
+        var texto = nombre.replace("Enrique","Madero Morales")
+        // to UpperCase a Mayusculas
+        var texto = nombre.toUpperCase();
+        // tolowerCase a minusculas
+        var texto = nombre.toLowerCase();
+        document.write(texto);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos JS</title>
+</head>
+<body>
+    <script>
+        // Declarar arreglo
+        var colores = ["Amarillo", "verde", "azul", "rojo", "gris"];
+        // Metodo mas usados
+            // Acceder y cambiar elementos de arreglo
+                /*colores[5]="negro";
+                colores[6]="purpura";
+                document.write(colores);*/
+                
+                // Metodo 1
+                /*var longitudarreglo = colores.length;
+                colores[longitudarreglo] = "purpura";
+                document.write(colores);*/
+
+                // Metodo 2
+                /*colores.push("rosa", "blanco", "naranja")
+                document.write(colores);*/
+
+            // Eliminar elementos pop elimina el ultimo elemento
+                /*colores.pop();
+                document.write(colores);*/
+
+            // Concatenar arreglos
+                /*var colores = ["Amarillo", "verde", "azul", "rojo", "gris"];
+                var colores2 = ["rosa" , "Naranja", "Blanco", "Purpura"]
+
+                var todoscolores = colores.concat(colores2);
+                document.write(todoscolores);*/
+
+
+            // Cambiar estilo de arreglo
+                /*var colores = ["Amarillo", "verde", "azul", "rojo", "gris"];
+                var arregloguion = colores.join(" - ");
+                document.write(arregloguion);*/
+
+            // Ordenar alfabeticamente
+            var arreglordenado = colores.sort();
+            document.write(arreglordenado);
+
+
+    </script>
+    
+</body>
+</html>

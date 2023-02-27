@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar DOM JS</title>
+</head>
+<body>
+    <ol id="lista">
+        <li id="uno">Luis Enrique</li>
+        <li>Francis Celia</li>
+
+    </ol>
+
+
+    <script>
+        // Editar Contenido
+        var elemento1 = document.getElementById("uno");
+            // Metodo 1 toma en cuentas las etiquetas
+            elemento1.innerHTML = "Nuevo elemento";
+            // Metodo 2 no toma en cuenta las etiquetas
+            elemento1.textContent="Nuevo Elemento";
+        // Reemplazar elemento
+        var elemnto2 = document.createElement("li");
+        var contenido = document.createTextNode("Lionel Messi");
+        elemnto2.appendChild(contenido);
+
+        var contenedor = document.getElementById("lista");
+        var posicion = document.getElementsByTagName("li")[0];
+        
+        // contenedor.replaceChild(elemnto2, posicion);
+
+        // Eliminar Elemento
+        contenedor.removeChild(posicion);
+
+    </script>
+    
+</body>
+</html>

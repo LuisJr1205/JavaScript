@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JS</title>
+</head>
+<body>
+    <h1 id="Titulo">Titulo de mi pagina web</h1>
+    <div id="subtitulo"></div>
+
+    <p class="miparrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Qui, quia explicabo odio fuga quisquam delectus enim incidunt sapiente autem 
+        itaque officia? Illo animi laborum, itaque temporibus a quaerat tenetur deserunt?
+        Iure, debitis repudiandae. Ipsa recusandae deserunt atque saepe. Repudiandae, incidunt! 
+        Magni impedit reprehenderit, blanditiis ut amet assumenda odio. Vitae fugiat eaque tenetur 
+        ea quam odit ipsa doloribus eum sunt minima!
+        Sed minima ipsam odit quasi eligendi nulla non dolor laboriosam sint voluptate aperiam, 
+        ipsum dignissimos voluptatibus velit nobis fuga ad at officiis reprehenderit minus nostrum 
+        dolore asperiores. Vero, aspernatur expedita?</p>
+
+    <p class="elemento">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Qui, quia explicabo odio fuga quisquam delectus enim incidunt sapiente autem 
+        itaque officia? Illo animi laborum, itaque temporibus a quaerat tenetur deserunt?
+        Iure, debitis repudiandae. Ipsa recusandae deserunt atque saepe. Repudiandae, incidunt! 
+        Magni impedit reprehenderit, blanditiis ut amet assumenda odio. Vitae fugiat eaque tenetur 
+        ea quam odit ipsa doloribus eum sunt minima!
+        Sed minima ipsam odit quasi eligendi nulla non dolor laboriosam sint voluptate aperiam, 
+        ipsum dignissimos voluptatibus velit nobis fuga ad at officiis reprehenderit minus nostrum 
+        dolore asperiores. Vero, aspernatur expedita?</p>
+
+    <p class="miparrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Qui, quia explicabo odio fuga quisquam delectus enim incidunt sapiente autem 
+        itaque officia? Illo animi laborum, itaque temporibus a quaerat tenetur deserunt?
+        Iure, debitis repudiandae. Ipsa recusandae deserunt atque saepe. Repudiandae, incidunt! 
+        Magni impedit reprehenderit, blanditiis ut amet assumenda odio. Vitae fugiat eaque tenetur 
+        ea quam odit ipsa doloribus eum sunt minima!
+        Sed minima ipsam odit quasi eligendi nulla non dolor laboriosam sint voluptate aperiam, 
+        ipsum dignissimos voluptatibus velit nobis fuga ad at officiis reprehenderit minus nostrum 
+        dolore asperiores. Vero, aspernatur expedita?</p>
+
+    <script>
+        // Acceder a los elementos con el DOM
+        var parrafos = document.getElementsByTagName("p");
+        var elemento1 = document.getElementById("elemento");
+        var elementoclase = document.getElementsByClassName("miparrafo");
+        
+        //Crear un nodo en el dom
+            // 1 Crear elemento
+            var nuevo = document.createElement("h3");
+            // 2 Crear el contenido
+            var contenido = document.createTextNode("Este es mi nuevo elemento");
+            // 3 Juntar el elemento creado con el contenido
+            nuevo.appendChild(contenido);
+            // 4 Agregar nuevo elemento creado a mi documento
+            // document.body.appendChild(nuevo);
+            document.getElementById("subtitulo").appendChild(nuevo);
+            // 5 Crear atributos
+            nuevo.setAttribute("class","misubtitulo");
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JS</title>
+</head>
+<body>
+    <script>
+        /*function resta(valor1, valor2){
+            var resultado= valor1 - valor2;
+            return resultado;
+
+        }
+
+        document.write(resta(10,30));*/
+
+        // Variable global
+        var variableglobal = "Hola";
+
+        var valormin = function (valor1, valor2){
+            var variablelocal = "Local"
+
+            if (valor1<valor2) {
+                return valor1;
+            } else{
+                return valor2;
+            }
+        }
+
+        document.write(valormin(100,80));
+        document.write("<br>");
+        document.write(valormin(50,80));
+        document.write("<br>");
+        document.write(valormin(60,80));
+    </script>
+    
+</body>
+</html>
