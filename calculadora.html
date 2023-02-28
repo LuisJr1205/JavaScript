@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            width: 30%;
+            margin: 50px auto;
+            background: #645CBB;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 50px;
+            color: #fff;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #EBC7E6;
+            color: #3ba8db;
+        }
+
+        .contenedor{
+            width: 60%;
+            margin: 100px auto;
+            background: #645CBB;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 50px;
+        }
+
+        .inputs{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;;
+        }
+
+        .inputs input{
+            width: 50%;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            color: #645CBB;
+            border-radius: 50px;
+            border: none;
+        }
+
+        .botones{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            justify-content: space-around;
+        }
+
+        .botones button{
+            width: 25%;
+            height: 50px;
+            margin: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            background: #A084DC;
+            color: #fff;
+            border: 0;
+            transition: all 0.3s;
+            border-radius: 50px;
+
+        }
+
+        .botones button:hover{
+            background: #92f8ff80;
+        }
+
+        .resul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 80%;
+            margin: 30px 0 10px 0;
+        }
+
+        .resul p{
+            color: #fff;
+            font-size: 45px;
+            font-weight: 700;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div class="contenedor">
+        <div id="inputs" class="inputs">
+            <input type="number" id="numero1">
+            <input type="number" id="numero2">
+        </div>
+
+        <div id="botones" class="botones">
+            <button id="suma">Suma</button>
+            <button id="resta">Resta</button>
+            <button id="mult">Multiplicacion</button>
+            <button id="div">Division</button>
+        </div>
+
+        <div class="resul">
+            <p id="resultado">-</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var operaciones = function (e) {
+            var numero1 = parseFloat(document.getElementById("numero1").value);
+            var numero2 = parseFloat(document.getElementById("numero2").value);
+            var resultado = document.getElementById("resultado");
+            var operacion = e.target.id;
+
+            if (operacion == "suma") {
+                var resul = numero1 + numero2;
+            }
+            else if (operacion == "resta"){
+                var resul = numero1 - numero2;
+            }
+            else if (operacion == "mult") {
+                var resul = numero1 * numero2;
+            }
+            else if (operacion == "div"){
+                var resul = numero1 / numero2;
+            }
+
+            resultado.innerHTML = resul;
+            // alert(e.target.id);
+        }
+
+
+        // Obtenemos el evento click en cada boton
+        var botones = document.getElementById("botones");
+        botones.addEventListener("click",operaciones);
+
+    </script>
+    
+</body>
+</html>
