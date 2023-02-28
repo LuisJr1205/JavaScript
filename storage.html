@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage y Session Storage</title>
+</head>
+<body>
+    <script>
+        // LocalStorage
+        // Metodo 1
+        // localStorage.nombre = "Luis Enrique";
+
+        // Metodo 2
+        // localStorage.setItem('nombre','Luis');
+
+        // Mostrar en pantalla funge como una base de datos temporal dentro de la pc usuario
+        // document.write(localStorage.nombre);
+        // eliminar elemento
+        // localStorage.removeItem('nombre');
+
+        // sessionStorage se guarda por sesion o por tabulador, hasta que se cieere el navegador
+
+        sessionStorage.nombre ="Luis";
+        document.write(sessionStorage.nombre);
+
+
+    </script>
+    
+</body>
+</html>

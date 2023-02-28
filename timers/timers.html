@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timers JS</title>
+</head>
+<body>
+    <script>
+        // timeout
+        // (function () {
+        //     function holamundo() {
+        //         console.log("Hola Mundo");
+        //     }
+
+        //     setTimeout(holamundo,3000); //Funcion mas el delay
+
+        // }())
+
+        // interval
+        (function () {
+            var contador = 0;
+
+            function holamundo(){
+                contador++;
+                console.log(contador);
+
+                if (contador == 10) {
+                    clearInterval(repeticion);
+                }
+            }
+            //Funcion cada tiempo ejecuta
+            var repeticion = setInterval(holamundo,1000); 
+
+        }())
+    </script>
+    
+</body>
+</html>
